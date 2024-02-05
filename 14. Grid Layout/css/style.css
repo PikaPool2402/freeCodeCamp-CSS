@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+
+  display: grid;
+  grid-auto-rows: 75px auto 75px;
+  grid-template-columns: repeat(9, 1fr);
+  
+  grid-template-areas:
+    "hd hd hd hd hd hd hd hd hd"
+    "mn mn mn mn mn mn mn sb sb"
+    "ft ft ft ft ft ft ft ft ft"
+  ;
+  /* specify grid-areas */
+}
+
+.container {
+  display: grid;
+  /* by default, rows are stacked on top of each other */
+
+  /* grid-auto-flow: column; */
+  /* columns are stacked on top of each other */
+
+  grid-template-columns: 200px 100px 200px;
+  /* width of first, second and third column */
+  grid-template-columns: repeat(4, 1fr);
+  /* total 4 columns, fr - fraction unit, used with css-grids */
+  grid-template-columns: repeat(2, 1fr, 2fr);
+  /* this is a pattern, that will repeat over all the elements */
+
+  grid-auto-rows: 200px;
+  /* specify the width of all the rows */
+  grid-auto-rows: minmax(150px, auto);
+  /* specify the minimum and maximum width of all the rows */
+
+  row-gap: 1rem;
+  column-gap: 2rem;
+  /* specify gap between grid-elements */
+
+  gap: 1rem, 2rem;
+  /* shorthand for row-gap, column-gap */
+  gap: 1rem;
+  /* space between the cells are called gutters */
+
+  grid-area: mn;
+  /* name the grid-area */
+}
+
+.box {
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+.box:first-child {
+  background-color: #00f;
+
+  /* grid-column: 1 / 4; */
+  grid-column-start: 1;
+  grid-column-end: 4;
+
+  /* grid-row: 1 / 3; */
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  display: grid;
+
+  justify-content: center;
+  /* align-horizontally */
+  align-content: center;
+  /* align-vertically */
+
+  place-content: center;
+  /* shorthand-notation */
+}
+
+.box:nth-child(2) {
+  background-color: purple;
+  grid-column: 1 / 5;
+  grid-row: 3 / 4;
+}
+
+.el {
+  color: #fff;
+  background-color: rebeccapurple;
+  
+  display: grid;
+  place-content: center;
+}
+
+.header {
+  grid-area: hd;
+  /* name the grid-area */
+}
+
+.sidebar {
+  grid-area: sb;
+  /* name the grid-area */
+  background-color: #00f;
+}
+
+.footer {
+  grid-area: ft;
+  /* name the grid-area */
+}
+
+/* https://cssgridgarden.com/ */

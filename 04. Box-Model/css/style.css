@@ -1,0 +1,62 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    /* includes the padding & the border of the element, while calculating the size of the element */
+    /* does NOT include the margin */
+}
+
+/* h1 {
+    font-size: 3rem;
+    border: 2px dashed red;
+
+    width: 50%;
+    padding: 0.5em;
+} */
+
+/* (check out the computed tab) */
+/* use dev-tools to inspect the box-model */
+
+/* it is difficult to keep track of the default-styling of the browser*/
+/* therefore, we use css reset to remove the default-styling of the browser */
+
+.container {
+    font-size: 1.5rem;
+
+    border: dashed red;
+    border-top: 5px solid green;
+    border-right: 10px dotted yellow;
+    /* border-top-width: 5px;
+    border-top-style: solid;
+    border-top-color: green; */
+
+    margin: 1.5em;
+    padding: 1.5em;
+    /* margin: 10px 10px 10px 10px;
+    shorthand notation: top-right-bottom-left */
+
+    /* margin: 10px 10px;
+    shorthand notation: top-bottom, right-left */
+
+    outline: 5px solid purple;
+    outline-offset: 10px;
+    /* outline is not a part of the box-model */
+}
+
+.circle {
+    margin: 3rem auto;
+    /* center content horizontally */
+
+    background: gold;
+    height: 100px;
+    width: 100px;
+
+    border: 2px solid black;
+    outline: 2px solid red;
+    outline-offset: 0.25rem;
+
+    border-radius: 50%;
+    /* used to make a circle */
+}

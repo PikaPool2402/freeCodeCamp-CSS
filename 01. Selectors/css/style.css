@@ -1,0 +1,47 @@
+/* universal selector */
+* {
+    font-family: Arial;
+}
+
+
+/* element selector */
+body {
+    font-size: 22px;
+    /* property inherited by elements nested inside */
+    /* some properties, eg border, cannot be inherited */
+}
+
+h1, h2 {
+    color: blue;
+}
+/* select both h1 and h2 */
+
+h1 h2 {
+    color: blue;
+}
+/* select all the h2's inside h1 */
+
+p {
+    color: purple;
+    /* color: purple!important;
+    override everything, not recommended */
+}
+
+
+/* class selector */
+.gray {
+    color: gray;
+}
+
+.highlight {
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+
+/* id selector */
+#second {
+    font-style: italic;
+    
+}
+/* should avoid using id-selector */

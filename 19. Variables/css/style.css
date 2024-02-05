@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Font */
+  --FF: "Nunito", sans-serif;
+  --FS: 1.5rem;
+  --FS-XL: 3rem;
+
+  /* Color */
+  --BGCOLOR: #475569;
+  --ALT-BGCOLOR: #1E293B;
+  --DARK-COLOR: #000;
+  --LIGHT-COLOR: whitesmoke;
+  --RADIAL-COLOR: whitesmoke;
+
+  /* Square */
+  --SQUARE-BGCOLOR: papayawhip;
+  --SQUARE-SIZE: max(150px, 20vw);
+
+  /* General */
+  --PADDING: 0.5rem;
+  --BORDERS: 2px solid var(--DARK-COLOR);
+  --SHADOWS: 0 6px 5px -5px var(--DARK-COLOR);
+}
+
+/* Dark-Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --BGCOLOR: #000;
+    --ALT-BGCOLOR: #333;
+    --RADIAL-COLOR: rgb(217, 217, 217);
+    --SQUARE-BGCOLOR: rgb(202, 174, 202);
+  }
+}
+
+body {
+  font: var(--FS) var(--FF);
+  min-height: 100vh;
+
+  background-color: var(--BGCOLOR);
+  background-image: radial-gradient(var(--RADIAL-COLOR), var(--BGCOLOR));
+
+  display: flex;
+  flex-direction: column;
+}
+
+header, nav, footer {
+  display: grid;
+  text-align: center;
+  place-content: center;
+  grid-template-columns: 100%;
+}
+
+header, footer {
+  position: sticky;
+  color: var(--LIGHT-COLOR);
+  background-color: var(--ALT-BGCOLOR);
+}
+
+header {
+  top: 0;
+}
+
+nav {
+  padding: var(--PADDING);
+  color: var(--DARK-COLOR);
+  background-color: var(--LIGHT-COLOR);
+
+  box-shadow: var(--SHADOWS);
+  border-bottom: var(--BORDERS);
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+
+  padding: 10px 0;
+  gap: min(4vw, 15px);
+}
+
+footer {
+  bottom: 0;
+}
+
+.square--highlight {
+  --SQUARE-BGCOLOR: cornflowerblue;
+  /* redefine the variable for .square--highlight class */
+}
+
+.square {
+  font-size: var(--FS-XL);
+  box-shadow: var(--SHADOWS);
+  background-color: var(--SQUARE-BGCOLOR);
+
+  display: grid;
+  place-content: center;
+
+  width: var(--SQUARE-SIZE);
+  height: var(--SQUARE-SIZE);
+
+  border: var(--BORDERS);
+  border-radius: 15px;
+}

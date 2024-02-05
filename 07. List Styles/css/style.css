@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  padding: 5% 10%;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+ol {
+  list-style-type: decimal;
+  
+  /* list-style-type: disc; */
+  /* convert ordered to unordered list */
+}
+
+ul {
+  list-style-type: square;
+
+  text-align: center;
+  /* to center the text */
+  list-style-position: inside;
+  /* to center the bullet points */
+
+  list-style-image: url('../images/checkmark.png');
+}
+/* shorthand for all list properties is: list-style: ; */
+
+ul li:nth-child(2) {
+  color: red;
+}
+/* pseudo-class to select second <li> of the <ul> */
+
+ul ::marker {
+  color: red;
+  font-size: 1em;
+  font-weight: bold;
+
+  content: "only %5>> ";
+}
+/* pseudo-ELEMENT, not a class! */

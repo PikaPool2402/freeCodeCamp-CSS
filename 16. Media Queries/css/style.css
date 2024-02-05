@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font: 1.5rem "Nunito", sans-serif;
+
+  background-color: #475569;
+  background-image: radial-gradient(whitesmoke, #475569);
+
+  display: flex;
+  flex-direction: column;
+}
+
+header, nav, main, footer {
+  display: grid;
+  text-align: center;
+  place-content: center;
+  grid-template-columns: 100%;
+}
+
+header, footer {
+  position: sticky;
+  color: whitesmoke;
+  background-color: #1E293B;
+}
+
+header {
+  top: 0;
+}
+
+footer { 
+  bottom: 0;
+}
+
+main {
+  flex-grow: 1;
+}
+
+nav {
+  color: #000;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-bottom: 2px solid #000;
+}
+
+/* mobile first design, small to big screen */
+/* min-width - start from 100px */
+/* max-width - up to 100px */
+
+/*
+@media media_type and (condition: breakpoint) {
+  // CSS Rules
+}
+*/
+
+/*
+@media screen and (orientation: landscape) {
+  // CSS Rules
+}
+*/
+
+/* small-screen */
+@media screen and (min-width: 576px) {
+  body {
+    background-color: green;
+    background-image: radial-gradient(whitesmoke, green);
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+/* medium-screen */
+@media screen and (min-width: 768px) {
+  body {
+    background-color: gold;
+    background-image: radial-gradient(whitesmoke, gold);
+  }
+}
+
+/* large-screen */
+@media screen and (min-width: 992px) {
+  body {
+    background-color: firebrick;
+    background-image: radial-gradient(whitesmoke, firebrick);
+  }
+}
+
+/* xtra-large-screen */
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: rebeccapurple;
+    background-image: radial-gradient(whitesmoke, rebeccapurple);
+  }
+}
+
+/* mobile-landscape  */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+  body {
+    background-color: dodgerblue;
+    background-image: radial-gradient(whitesmoke, dodgerblue);
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+/* breakpoints */
+/* https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
+/* https://getbootstrap.com/docs/5.0/layout/breakpoints/ */
+/* https://tailwindcss.com/docs/screens */

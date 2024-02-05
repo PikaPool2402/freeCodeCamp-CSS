@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* Begin Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  /* images are inline-elements, by default */
+}
+/* End Reset */
+
+/* Utility Classes */
+.nowrap {
+  white-space: nowrap;
+}
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+/* End Utility Classes */
+
+body {
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+
+  background-color: aliceblue;
+  /* fallback background-color */
+
+  background-image: 
+    url("../img/bubbles.png"),
+    linear-gradient(to left, steelblue, #fff)
+  ;
+  /* two background images in one */
+
+  background-repeat: repeat-y, no-repeat;
+  /* specified for first image, second image */
+  background-position: right center;
+  /* specify the position of the background */
+  background-size: 20%, auto;
+  /* specified for first image, second image */
+}
+
+.container {
+  background-color: rgb(251, 210, 156);
+  /* fallback background-color, if image does not load */
+  background-image: url('../img/map-2176x1451.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 30px;
+  padding: 20px;
+
+  border-bottom: 2px solid #000;
+  background-color: hsla(0, 0%, 100%, 0.35);
+  /* a filter to enhance the text-readability */
+}
+
+.h1 {
+  font-size: 500%;
+  color: aliceblue;
+  text-shadow: 2px 2px 5px #000;
+  /* x-axis, y-axis, blur value, color */
+}
+
+.profile-pic-figure {
+  width: 35%;
+  /* relative to the browswer-width */
+}
+
+.profile-pic-figure img {
+  width: 100%;
+  height: auto;
+  min-width: 100px;
+  /* relative to the container */
+  
+  border: 5px double gray;
+  border-radius: 50%;
+}
+
+.example {
+  margin-top: 1rem;
+  padding-left: 20px;
+  border: 1px solid red;
+}
+
+.example img {
+  width: 25%;
+  height: auto;
+  /* relative to the container */
+}
+
+.clip {
+  font-size: 18rem;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-image: url("../img/scenic-2200x1331.png");
+  background-size: 100%;
+
+  /* see-through text effect */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  min-height: 400px;
+  margin-inline: auto;
+  /* center horizontally */
+  border: 1px solid #000;
+  
+  display: flex;
+  gap: 1rem;
+
+  /* justify-content: flex-start; */
+  /* default flexbox-position */
+
+  justify-content: space-evenly;
+  /* justify-content used for horizontal alignment */
+
+  align-items: center;
+  /* align-items used for vertical alignment */
+
+  align-content: center;
+  /* align-content used to align the rows */
+
+  /* flex-direction: column; */
+  /* convert from a row to a column */
+
+  flex-wrap: wrap;
+  /* for responsiveness */
+
+  flex-flow: row wrap;
+  /* shorthand for flex-wrap and flex-direction */
+}
+/* flexbox is applied on the container only! */
+
+.box {
+  height: 100px;
+  min-width: 100px;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  /* center the elements inside the box */
+
+  flex-grow: 1;
+  /* all the items grow equally to fill the container-width */
+
+  /* flex-shrink: 1; */
+  /* similar to flex-grow */
+  
+  flex-basis: 100px;
+  /* acts as min-width for flex-items */
+
+  flex: 1 1 150px;
+  /* shorthand for flex-grow, flex-shrink, flex-basis */
+}
+
+.box:nth-child(2) {
+  flex-grow: 2;
+  /* grow more than the first element, but not double */
+
+  order: 4;
+  /* last-position, higher order */
+  order: -1;
+  /* beginning-position */
+  order: 0;
+  /* default-position */
+}
+
+/* https://flexboxfroggy.com/ */

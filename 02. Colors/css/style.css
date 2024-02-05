@@ -1,0 +1,38 @@
+body {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
+    background-color: papayawhip;
+    /* background: papayawhip; */
+
+    color: black;
+    /* color: rgb(0, 0, 0); */
+    /* can take value from 0 - 255 */
+
+    color: rgba(0, 0, 0, 0.5);
+    /* a -> alpha channel/transparency */
+    /* a can take value from 0 - 1 */
+}
+
+p {
+    color: #FF0000;
+    color: #00FF00;     
+    color: #0000FF;
+    /* hexadecimal codes */
+    
+    color: #F00;
+    color: #0F0;
+    color: #00F;
+    /* shorthand notation
+    pairs of 2, three times */
+
+    color: hsl(0, 100%, 50%);
+    /* hue, saturation, light
+    values: 0 - 360, 0% - 100%, 0% - 100% */
+
+    color: #333;
+}
+
+/* https://coolors.co/ */
+/* https://coolors.co/contrast-checker/112a46-acc8e5 */

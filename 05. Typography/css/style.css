@@ -1,0 +1,34 @@
+/* typography is the way text is arranged and presented */
+
+body {
+    padding: 10%;
+    font-size: 2rem;
+
+    font-family: 'Courier New', Courier, monospace;
+    /* second and third values are fallbacks, if 'Courier-New' is not found */
+    /* always try to use web-safe fonts, that are already pre-installed on most machines */
+}
+
+/* 
+input, button {
+    font: inherit;
+}
+font-size not inherited by input & button, even though they are a child of body */
+
+p {
+    /* properties not affected by the font-settings */
+    text-indent: 2em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    line-height: 1.5;
+    word-spacing: 0.1em;
+    letter-spacing: 0.1em;
+
+    /* font-settings */
+    font-style: italic;
+    font-weight: normal;
+}
+
+/* https://fonts.google.com/ */

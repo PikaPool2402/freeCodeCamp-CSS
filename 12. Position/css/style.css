@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  min-height: 200vh;
+}
+
+.outer-container {
+  width: 75vw;
+  height: 85vh;
+  margin: 40px auto;
+  border: 3px dashed #000;
+
+  position: relative;
+  /* parent/ancestor element */
+}
+
+.inner-container {
+  width: 40vw;
+  height: 50vh;
+  margin: 200px auto;
+  border: 2px solid #00f;
+
+  /* position: relative; */
+  /* serves as closer parent/ancestor element */
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  color: #fff;
+  padding: 1rem;
+}
+
+.absolute {
+  /* position: static; */
+  /* default-position of elements */
+
+  position: absolute;
+  /* need to define the parent/ancestor element with position-relative property
+  the element positions itself relative to the closest parent/ancestor element
+  if no ancestor element, it positions relative to the browser-window */
+
+  top: 0;
+  left: 0;
+  /* positions-values */
+
+  z-index: 1;
+  background-color: #00f;
+}
+
+.relative {
+  position: relative;
+  /* no need to define the parent/ancestor element
+  always stays relative to the parent container */
+
+  top: 300px;
+  left: 100px;
+  /* positions-values */
+
+  background-color: #f00;
+}
+
+.fixed {
+  position: fixed;
+  /* element doesn't move on scrolling
+  positions relative to the browser-window */
+
+  top: 100px;
+  background-color: green;
+}
+
+.sticky {
+  position: sticky;
+  /* relative-position when not scrolling */
+  /* sticks at the top of the container, when scrolling */
+
+  top: 10px;
+  /* used to position where to stick on scrolling */
+
+  background-color: #000;
+}
+
+/* second-example */
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+}
+
+.blue {
+  background-color: #00f;
+}
+
+.red {
+  background-color: #f00;
+}
+
+.green {
+  background-color: green;
+}
+
+header, footer {
+  color: #fff;
+  text-align: center;
+  height: 100px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  /* fix the header at the top */
+
+  font-size: 5rem;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  /* fix the footer at the bottom */
+
+  font-size: 3rem;
+  background-color: #000;
+}
+
+a:visited {
+  color: #fff;
+}
+
+.social {
+  background-color: royalblue;
+  font-size: inherit;
+  color: #fff;
+  padding: 1rem;
+
+  position: fixed;
+  top: 30%;
+  left: 0;
+
+  z-index: 1;
+  /* always on top of all elements */
+}
