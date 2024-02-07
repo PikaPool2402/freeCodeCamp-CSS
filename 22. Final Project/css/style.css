@@ -288,6 +288,8 @@ tbody,
 tfoot,
 tr {
     display: contents;
+    /* grid layout requires flat-elements, no semantic meaning */
+    /* display: contents; makes the child independent of the parent-element */
 }
 
 .menu__container {
